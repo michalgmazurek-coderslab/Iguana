@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     function menuAnimation() {
         var navContainer = document.getElementsByClassName('container--nav');
-        console.log(menuContainer);
         navTrigger.addEventListener('click', function(event) {
             event.stopPropagation();
             navTrigger.classList.toggle('active');
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         var target = $(this.getAttribute('href'));
         if (target.length) {
             event.preventDefault();
-            console.log(target.offset().top);
             if ($(window).width() < 768) {
                 $('html, body').stop().animate({
                     scrollTop: target.offset().top - 60
