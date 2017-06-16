@@ -481,11 +481,13 @@
             line-height: 4rem;
         }
         td {
-            @media only screen and (min-width: 768px) {
-                font-size: 1.5rem;
+            p {
+                font-size: 1.4rem;
+                @media only screen and (min-width: 768px) {
+                    font-size: 1.5rem;
+                }
             }
         }
-
         .table-subtitle {
             font-size: 1.6rem;
             line-height: 4rem;
@@ -495,6 +497,9 @@
 
     .text {
         padding-bottom: 50px;
+    }
+    .text--bolder {
+        font-weight: 600;
     }
 }
 
