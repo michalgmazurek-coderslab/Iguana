@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", "Verdana", sans-serif;
     color: #3b3a36;
     box-sizing: border-box;
 }
@@ -13,12 +13,16 @@
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+
     &--nav {
         position: relative;
         width: 100%;
         max-width: 1090px;
         margin-left: auto;
         margin-right: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -30,7 +34,7 @@
     text-align: center;
     font-size: 3rem;
     line-height: 4rem;
-    margin: 110px 0 50px 0;
+    margin: 110px 0 50px;
     font-weight: 400;
     @media only screen and (min-width: 768px) {
         font-size: 4.5rem;
@@ -38,6 +42,7 @@
         margin-top: 140px;
     }
 }
+
 .text {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -60,7 +65,7 @@
     text-align: center;
     font-size: 2.4rem;
     line-height: 3.2rem;
-    margin: 0 0 50px 0;
+    margin: 0 0 50px;
     padding-top: 50px;
     font-weight: 400;
     @media only screen and (min-width: 768px) {
@@ -90,9 +95,14 @@
         transition: all linear 0.6s;
         position: fixed;
         top: 0;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
         @media only screen and (min-width: 768px) {
             height: 90px;
         }
+
         #nav-trigger {
             cursor: pointer;
             width: 30px;
@@ -107,6 +117,7 @@
             @media only screen and (min-width: 1095px) {
                 display: none;
             }
+
             i {
                 background-color: #fff;
                 border-radius: 2px;
@@ -298,7 +309,6 @@
     }
 
     &__logo {
-
         display: none;
         @media only screen and (min-width: 768px) {
             height: 60px;
@@ -357,11 +367,12 @@
         }
     }
 }
+
 .list-visable {
     opacity: 1;
     visibility: visible;
     height: 160px;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 .menu-higher {
@@ -369,20 +380,23 @@
 }
 
 .menu-sticky {
-  position: fixed;
-  width: 100%;
-  top: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 #about-us {
     background-color: rgba(237, 217, 192, 0.2);
+
     .subheader {
         padding-top: 60px;
         margin-top: 0;
     }
+
     .text {
         padding-bottom: 20px;
     }
+
     .text:nth-child(3) {
         padding-bottom: 50px;
     }
@@ -394,15 +408,23 @@
             margin-bottom: 50px;
         }
     }
+
     .gallery-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width: 790px;
-        margin : 0 auto 50px auto;
+        max-width: 540px;
+        margin: 0 auto 50px;
+        @media only screen and (min-width: 768px) {
+            max-width: 740px;
+        }
         @media only screen and (min-width: 1095px) {
             max-width: 900px;
         }
+
         img {
             max-width: 280px;
             max-height: 220px;
@@ -424,17 +446,19 @@
                 }
             }
         }
+
         .img-por {
             max-height: 300px;
             @media only screen and (min-width: 1095px) {
                 max-height: 400px;
-
             }
         }
     }
 }
+
 #prices {
     background-color: rgba(237, 217, 192, 0.2);
+
     table {
         width: 100%;
         text-align: left;
@@ -450,20 +474,22 @@
         @media only screen and (min-width: 1095px) {
             max-width: 560px;
         }
+
         th {
             width: 80%;
             font-size: 1.7rem;
             line-height: 4rem;
         }
+
         .table-subtitle {
             font-size: 1.6rem;
             line-height: 4rem;
             font-weight: 600;
         }
     }
+
     .text {
         padding-bottom: 50px;
-
     }
 }
 
@@ -471,6 +497,7 @@
     .text {
         margin-bottom: 30px;
     }
+
     .google-map {
         width: 100%;
         height: 300px;
