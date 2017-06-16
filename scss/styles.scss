@@ -480,6 +480,11 @@
             font-size: 1.7rem;
             line-height: 4rem;
         }
+        td {
+            @media only screen and (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
 
         .table-subtitle {
             font-size: 1.6rem;
