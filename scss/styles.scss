@@ -109,10 +109,10 @@
             height: 25px;
             position: absolute;
             right: 25px;
-            top: 15px;
+            top: 18px;
             z-index: 9;
             @media only screen and (min-width: 768px) {
-                top: 30px;
+                top: 32px;
             }
             @media only screen and (min-width: 1095px) {
                 display: none;
@@ -371,7 +371,7 @@
 .list-visable {
     opacity: 1;
     visibility: visible;
-    height: 160px;
+    height: auto;
     padding-top: 0;
 }
 
@@ -480,14 +480,13 @@
             font-size: 1.7rem;
             line-height: 4rem;
         }
+
         td {
             p {
                 font-size: 14px;
-                @media only screen and (min-width: 768px) {
-                    font-size: 15px;
-                }
             }
         }
+
         .table-subtitle {
             font-size: 1.6rem;
             line-height: 4rem;
@@ -498,14 +497,15 @@
     .text {
         padding-bottom: 50px;
     }
-    .text--bolder {
-        font-weight: 600;
-    }
 }
 
 #contact {
     .text {
         margin-bottom: 30px;
+    }
+
+    .text--bolder {
+        font-weight: 600;
     }
 
     .google-map {
