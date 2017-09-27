@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var menuList = document.getElementsByClassName('menu__list');
   var menuContainer = document.getElementsByClassName('menu__container')[0];
 
-  menuAnimation();
-
   function menuAnimation() {
     var navContainer = document.getElementsByClassName('container--nav');
     navTrigger.addEventListener('click', function(event) {
@@ -22,23 +20,26 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     });
   }
-  $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      event.preventDefault();
-      if ($(window).width() < 768) {
-        $('html, body').stop().animate({
-          scrollTop: target.offset().top - 60
-        }, 1000);
-      } else {
-        $('html, body').stop().animate({
-          scrollTop: target.offset().top - 90
-        }, 1000);
-      }
-    }
-  });
 
-  
+  function pageScroll() {
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        if ($(window).width() < 768) {
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 60
+          }, 1000);
+        } else {
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 90
+          }, 1000);
+        }
+      }
+    });
+  }
+
+function backToTheTop() {
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 250) { // If page is scrolled more than 50px
       $('#return-to-top').fadeIn(200); // Fade in the arrow
@@ -51,4 +52,29 @@ document.addEventListener('DOMContentLoaded', function(event) {
       scrollTop: 0 // Scroll to top of body
     }, 500);
   });
+}
+
+function slider() {
+  $(document).ready(function(){
+  $('.gallery-container').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableHeight: true,
+    prevArrow: $('#left-arrow'),
+    nextArrow: $('#right-arrow')
+  });
+});
+}
+
+function pageEngine() {
+  menuAnimation();
+  pageScroll();
+  backToTheTop();
+  slider();
+}
+pageEngine();
+
 });
